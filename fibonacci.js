@@ -16,6 +16,22 @@ const fibonacci = function (n) {
 	return fib;
 };
 
-const fibRec = function (n) {};
+const fibRec = function (n, sequence = [0, 1]) {
+	if (n === 0) {
+		return [];
+	} else if (n === 1) {
+		return [0];
+	}
+
+	if (sequence.length >= n) {
+		return sequence.slice(0, n);
+	}
+
+	const nextNum = sequence[sequence.length - 1] + sequence[sequence.length - 2];
+
+	sequence.push(nextNum);
+
+	return fibRec(n, sequence);
+};
 
 export { fibonacci, fibRec };
