@@ -1,5 +1,5 @@
 const fibonacci = function () {
-	return "";
+	return [];
 };
 
 export default fibonacci;
