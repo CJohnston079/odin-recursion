@@ -1,9 +1,7 @@
 const fibonacci = function (n) {
 	if (n === 0) {
 		return [];
-	}
-
-	if (n === 1) {
+	} else if (n === 1) {
 		return [0];
 	}
 
@@ -18,4 +16,6 @@ const fibonacci = function (n) {
 	return fib;
 };
 
-export default fibonacci;
+const fibRec = function (n) {};
+
+export { fibonacci, fibRec };
